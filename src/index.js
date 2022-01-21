@@ -14,6 +14,11 @@ function images(e) {
 
 }
 
+const customStyle = {
+    color: "red",
+    fontSize: "20px",
+    border: "1px solid black"
+};
 
 
 //JSX EXPRESSION
@@ -22,7 +27,7 @@ const myDiv = (
 // There’s a rule that we haven’t mentioned: a JSX expression must have exactly one outermost element.
 
     <div>
-        <h1>
+        <h1 style={customStyle}>
               Your To-Do List {`${fName} ${lName}`} !
         </h1>
         <ul>
