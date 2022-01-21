@@ -1,13 +1,35 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+//JSX element
+  const fName =  "Anthony";
+    const lName = "Villegas";
+
+
+//JSX EXPRESSION
+const myDiv = (
+    //JSX Outer Elements
+// There’s a rule that we haven’t mentioned: a JSX expression must have exactly one outermost element.
+
+    <div>
+        <h1>
+              Your To-Do List {`${fName} ${lName}`} !
+        </h1>
+        <ul>
+            <li>Drink Coffee</li>
+            <li>Learn React</li>
+            <li>Learn Java</li>
+            <li>Eat food</li>
+            <li>Land Dream Job</li>
+        </ul>
+        <p>Your Lucky number for today is {Math.floor(Math.random() * 10)}</p>
+    </div>
+);
+
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  myDiv,
   document.getElementById('root')
 );
 
