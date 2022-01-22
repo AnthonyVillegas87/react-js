@@ -13,6 +13,24 @@ function images(e) {
     e.target.setAttribute('alt', 'java');
 
 }
+const headingStyle = {
+    color: ""
+}
+
+    var date = new Date();
+    var hour = date.getHours();
+    let greeting = '';
+    if(hour < 12) {
+        greeting = "Good Morning";
+        headingStyle.color = "red";
+    } else if(hour < 18) {
+        greeting = "Good Afternoon";
+        headingStyle.color = "green";
+    } else  {
+        greeting = "Good Evening";
+        headingStyle.color = "blue";
+    }
+
 
 const customStyle = {
     color: "red",
@@ -21,12 +39,15 @@ const customStyle = {
 };
 
 
+
+
 //JSX EXPRESSION
 const myDiv = (
     //JSX Outer Elements
 // There’s a rule that we haven’t mentioned: a JSX expression must have exactly one outermost element.
 
     <div>
+        <h2 className='heading' style={headingStyle}>{greeting}</h2>
         <h1 style={customStyle}>
               Your To-Do List {`${fName} ${lName}`} !
         </h1>
