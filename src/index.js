@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import reportWebVitals from './reportWebVitals';
+import App from '../src/components/App'
 //JSX element
   const fName =  "Anthony";
   const lName = "Villegas";
@@ -41,6 +41,10 @@ const myDiv = (
         </ul>
         <p>Your Lucky number for today is {Math.floor(Math.random() * 10)}</p>
         <p>Created by {fName} {lName} <span>&copy; {year}</span></p>
+        <div>
+            {App}
+        </div>
+
 
 
     </div>
@@ -52,7 +56,4 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
