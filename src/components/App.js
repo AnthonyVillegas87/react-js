@@ -8,6 +8,8 @@ function App() {
     ]
     return (
         <div className="comments">
+            <h1>{title}</h1>
+            <p>{body}</p>
             <h3>Comments({comments.length})</h3>
             <ul>
                 {comments.map((comment, index) => (
